@@ -1,0 +1,124 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="user-scalable=no, width=devices-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'styles/main.css' %}">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+   
+    <header>
+        <nav>
+            <picture>
+            <a href="./index.html">
+
+            <img class="logo" src="{% static 'branding/logo_light_horizontal.svg' type="img/svg" alt="Isologotipo de la marca Funkoshop?" %}">
+            </a>
+            </picture>
+            <ul class="headerul">
+                <li><a href="./pages/shop.html">SHOP</a></li>
+                <li><a href="./pages/contact.html">CONTACTO</a></li>
+                <li><a href="./pages/login.html">LOGUIN</a></li>
+                <li><a href="./pages/cart.html">
+                    <!-- <img src="" alt="icono de carrito"> -->
+                    <iconify-icon icon="mdi:cart"></iconify-icon>
+                </a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+        <main>
+       
+
+        {% comment %} <p>CARRITO DE COMPRAS</p> {% endcomment %}
+        <hr class="hr">
+
+        <section class="cartbox1">
+            <div>DETALLE DEL PRODUCTO</div>
+            <div>CANTIDAD</div>
+            <div>TOTAL</div>  
+
+        </section>
+
+        <section class="cartbox2">
+            <div class="imagen01">
+            <img  class="baby-yoda imagen1" src="{% static 'star-wars/baby-yoda-1.webp' alt="figura coleccionable Funko de Grogu de la serie The Mandalorian" %}">
+            </div>
+            <h1 class="alinear1">BADY YODA BLUEBALL</h1>
+            <input class="inputcart" min="0" type="number">
+            <p class="pricecart">$3599.98</p>
+            <img class="trashcart" src="{% static 'icons/delete_trash.svg' alt="" %}">
+            <P class="alinear2">STAR WARS</P>
+            <P class="alinear3">precio: $1799.99</P>
+          
+        </section>
+
+        <section class="cartbox3">
+            <div class="imagen01">
+                <img  class="baby-yoda imagen1" src="{% static 'pokemon/pidgeotto-1.webp' alt="figura coleccionable Funko de Grogu de la serie The Mandalorian" %}">
+                </div>
+                <h1 class="alinear1">PIDGEOTO</h1>
+                <input class="inputcart" min="0" type="number">
+                <p class="pricecart">$3599.98</p>
+                <img class="trashcart" src="{% static 'icons/delete_trash.svg' alt="" %}">
+                <P class="alinear2">STAR WARS</P>
+                <P class="alinear3">precio: $1799.99</P>
+
+        </section>
+
+        {% comment %} <p>RESUMEN</p> {% endcomment %}
+        <hr class="hr">
+
+        <div class="cartbox4bis">
+        <section class="cartbox4">
+            {{ title }}
+        </section>
+        </div>  
+
+        <div class='irapagar'>
+        <button type="button">IR A PAGAR</button>
+        </div>
+
+     
+       
+
+        </main>
+
+    <footer>
+
+        <ul>
+            <li>
+                <a href="">SHOP</a>
+            </li>
+            <li>
+                <a href="">INGRESAR</a>
+            </li>
+            <li>
+                <a href="">CONTACTO</a>
+            </li>
+        </ul>
+
+        <p>All rights reserved 2023 - Funkoshop &copy</p>
+
+        <img src="{% static 'branding/isotype.svg' type="img/svg" alt="Isologotipo de la marca Funkoshop" %}">
+        
+
+    </footer>
+    
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>
+
+
